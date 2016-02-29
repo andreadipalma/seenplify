@@ -1,0 +1,81 @@
+#!/usr/bin/octave -qf
+
+%% Machine Learning Online Class
+
+%  Instructions
+%  ------------
+%
+%  This file contains code that helps you get started on the
+%  linear exercise. You will need to complete the following functions
+%  in this exericse:
+%
+pkg load signal;
+
+%% Initialization
+clear ; close all; clc;
+source("utils.m");
+source("featlib.m");
+source("diagrams.m");
+
+%% The source data path
+
+config = struct("dataPath", "../json2csv/csv-10-08-2015/", ...
+                "outputPath", "./output-10-08-2015", ...
+                "commandLine", "FEATURES", ...
+                "mode", "HV");
+
+featureConfig = struct(
+     %% Time window size in secs
+     "timeWindow", 2.56,  ... % secs \
+
+     %% Cut off frequency (Hz) for the low pass filter
+     "fc", 1500, ... % Cut-off frequency (Hz)
+
+     %% The sampling rate (Hz)
+     "fs", 8192, ...
+
+     %% Filet order
+     "order", 5, ...
+
+     %% Max number of samples for the window
+     "maxWindowSamples", 40, ...
+
+     %% Window size in millisecs
+     "wnMSecs", 2500, ...
+
+     %% Percentage of overlap between two consecutive windows
+     "overlap", 0.5 %percentage of window overlap;
+);
+
+arg_list = argv ();
+
+if (length(arg_list) >= 1)
+  if (sum(strcmp ("-s", arg_list)) > 0)
+    pos = strcmp("-s", arg_list);
+    index = find(pos==1,1);
+    config.dataPath = arg_list{index+1};
+  endif
+  if (sum(strcmp ("-o", arg_list)) > 0)
+    pos = strcmp("-o", arg_list);
+    index = find(pos==1,1);
+    config.outputPath = arg_list{index+1};
+  endif
+  if (sum(strcmp ("-c", arg_list)) > 0)
+    pos = strcmp("-c", arg_list);
+    index = find(pos==1,1);
+    config.commandLine = arg_list{index+1};
+  endif
+  if (sum(strcmp ("-m", arg_list)) > 0)
+    pos = strcmp("-m", arg_list);
+    index = find(pos==1,1);
+    config.mode = arg_list{index+1};
+  endif
+endif;
+
+keyboard
+
+if (strcmp(config.commandLine, "FEATURES"))
+  calculateFeatures(config, featureConfig);
+elseif (strcmp(config.commandLine, "DISPLAY"))
+  displayPlot(config)
+endif

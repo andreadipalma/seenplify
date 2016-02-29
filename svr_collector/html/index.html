@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html> 
+<head> 
+	<title>Handheld Event Collector</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.0-rc.1/jquery.mobile-1.3.0-rc.1.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.3.0-rc.1/jquery.mobile-1.3.0-rc.1.min.js"></script>
+
+	<!--<script type="text/javascript" src="js/cordova.js"></script>-->
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/core.js"></script>
+</head> 
+<body> 
+<div class="app">
+	<div data-role="page" class="" data-theme="c">
+    
+	<div data-role="header" data-theme="c">
+		<h1>My Title</h1>
+		<a href="#mypanel" data-role="button" data-icon="bars" data-iconpos="notext" data-mini="true" data-inline="true" data-theme="c" title="Bars" class="ui-btn ui-mini ui-btn-inline ui-btn-icon-notext ui-btn-up-c"><span class="ui-icon ui-icon-bars ui-icon-shadow">&nbsp;</span></a>
+	</div><!-- /header -->
+
+	<div data-role="content" data-theme="c">	
+			<div data-role="panel" id="mypanel" data-position="left" data-display="push">
+				<!-- panel content goes here -->
+				<ul data-role="listview">
+					<li><a href="acura.html">Settings</a></li>
+					<li><a href="audi.html">History</a></li>
+					<li><a href="bmw.html">Sign in</a></li>
+				</ul>
+			</div><!-- /panel -->
+		
+            <h1>Personal Event Collector</h1>
+		
+			<div id="geo">                	
+				<button id="coordBtn" class="ui-btn ui-mini">Geo</button>
+				<button id="accBtn" class="ui-btn ui-mini">Acc</button>
+				<div id="geocoords"></div>                					
+			</div>
+	</div><!-- /content -->
+	<div data-role="footer"  data-theme="c">
+		<h2>Sample Footer</h2>
+	</div><!-- /header -->
+
+</div><!-- /page -->
+</div><!-- /app -->
+
+<script type="text/javascript">
+	app.initialize();
+</script>
+</body>
+
+</html>
+

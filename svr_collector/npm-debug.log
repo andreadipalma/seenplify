@@ -1,0 +1,65 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'node-debug' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.35
+4 verbose cache add [ 'node-debug', null ]
+5 verbose cache add name=undefined spec="node-debug" args=["node-debug",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'node-debug',
+6 verbose parsed url   path: 'node-debug',
+6 verbose parsed url   href: 'node-debug' }
+7 silly lockFile 1a4cd868-node-debug node-debug
+8 verbose lock node-debug /Users/dev/.npm/1a4cd868-node-debug.lock
+9 silly lockFile 1a4cd868-node-debug node-debug
+10 silly lockFile 1a4cd868-node-debug node-debug
+11 verbose addNamed [ 'node-debug', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 12d19e6e-node-debug node-debug@
+14 verbose lock node-debug@ /Users/dev/.npm/12d19e6e-node-debug.lock
+15 silly addNameRange { name: 'node-debug', range: '*', hasData: false }
+16 verbose request where is /node-debug
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id d722a93a44a79695
+19 verbose url raw /node-debug
+20 verbose url resolving [ 'https://registry.npmjs.org/', './node-debug' ]
+21 verbose url resolved https://registry.npmjs.org/node-debug
+22 verbose request where is https://registry.npmjs.org/node-debug
+23 info trying registry request attempt 1 at 17:51:01
+24 http GET https://registry.npmjs.org/node-debug
+25 info retry will retry, error on last attempt: Error: connect ECONNREFUSED
+26 info trying registry request attempt 2 at 17:51:32
+27 http GET https://registry.npmjs.org/node-debug
+28 info retry will retry, error on last attempt: Error: connect ECONNREFUSED
+29 info trying registry request attempt 3 at 17:52:54
+30 http GET https://registry.npmjs.org/node-debug
+31 silly lockFile 12d19e6e-node-debug node-debug@
+32 silly lockFile 12d19e6e-node-debug node-debug@
+33 error Error: connect ECONNREFUSED
+33 error     at errnoException (net.js:905:11)
+33 error     at Object.afterConnect [as oncomplete] (net.js:896:19)
+33 error  { [Error: connect ECONNREFUSED]
+33 error   code: 'ECONNREFUSED',
+33 error   errno: 'ECONNREFUSED',
+33 error   syscall: 'connect' }
+34 error If you are behind a proxy, please make sure that the
+34 error 'proxy' config is set properly.  See: 'npm help config'
+35 error System Darwin 12.4.0
+36 error command "node" "/usr/local/bin/npm" "install" "-g" "node-debug"
+37 error cwd /Users/dev/codehacks/svr_collector
+38 error node -v v0.10.35
+39 error npm -v 1.4.28
+40 error syscall connect
+41 error code ECONNREFUSED
+42 error errno ECONNREFUSED
+43 error stack Error: connect ECONNREFUSED
+43 error stack     at errnoException (net.js:905:11)
+43 error stack     at Object.afterConnect [as oncomplete] (net.js:896:19)
+44 verbose exit [ 1, true ]

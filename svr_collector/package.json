@@ -1,0 +1,15 @@
+{
+  "name": "collector",
+  "version": "0.0.0",
+  "description": "collector",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AndreaDP",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.10.6",
+    "morgan": "^1.5.0"
+  }
+}
