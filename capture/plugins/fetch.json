@@ -1,59 +1,11 @@
 {
-    "de.appplant.cordova.plugin.background-mode": {
-        "source": {
-            "type": "registry",
-            "id": "de.appplant.cordova.plugin.background-mode"
-        }
-    },
     "cordova-plugin-device": {
         "source": {
-            "type": "git",
-            "url": "https://github.com/apache/cordova-plugin-device",
-            "subdir": "."
-        },
-        "is_top_level": false,
-        "variables": {}
-    },
-    "org.apache.cordova.device": {
-        "source": {
-            "type": "git",
-            "url": "https://github.com/apache/cordova-plugin-device",
-            "subdir": "."
-        }
-    },
-    "org.apache.cordova.device-motion": {
-        "source": {
             "type": "registry",
-            "id": "org.apache.cordova.device-MOTION"
-        }
-    },
-    "cordova-plugin-device-motion": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-device-motion"
+            "id": "cordova-plugin-device"
         },
         "is_top_level": true,
         "variables": {}
-    },
-    "org.apache.cordova.device-orientation": {
-        "source": {
-            "type": "registry",
-            "id": "org.apache.cordova.device-orientation"
-        }
-    },
-    "cordova-plugin-device-orientation": {
-        "source": {
-            "type": "registry",
-            "id": "cordova-plugin-device-orientation"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
-    "org.apache.cordova.file": {
-        "source": {
-            "type": "registry",
-            "id": "org.apache.cordova.file"
-        }
     },
     "cordova-plugin-file": {
         "source": {
@@ -71,16 +23,34 @@
         "is_top_level": true,
         "variables": {}
     },
-    "org.apache.cordova.geolocation": {
-        "source": {
-            "type": "registry",
-            "id": "org.apache.cordova.geolocation"
-        }
-    },
     "cordova-plugin-geolocation": {
         "source": {
             "type": "registry",
             "id": "cordova-plugin-geolocation"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-device-motion": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-device-motion"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "de.appplant.cordova.plugin.background-mode": {
+        "source": {
+            "type": "registry",
+            "id": "de.appplant.cordova.plugin.background-mode"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-device-orientation": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-device-orientation"
         },
         "is_top_level": true,
         "variables": {}
